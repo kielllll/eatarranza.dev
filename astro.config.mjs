@@ -7,13 +7,15 @@ import react from '@astrojs/react'
 
 import icon from 'astro-icon'
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
 
-  integrations: [react(), icon()],
+  integrations: [react(), icon(), sitemap()],
 
   image: {
     service: passthroughImageService(),
