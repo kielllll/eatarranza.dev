@@ -1,24 +1,21 @@
 // @ts-check
 
-import tailwindcss from '@tailwindcss/vite'
-import { defineConfig, passthroughImageService } from 'astro/config'
-
-import react from '@astrojs/react'
-
-import icon from 'astro-icon'
-
-import sitemap from '@astrojs/sitemap'
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig, passthroughImageService } from "astro/config";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()],
-  },
+	vite: {
+		plugins: [tailwindcss()],
+	},
 
-  site: 'https://eatarranza.dev/',
-  integrations: [react(), icon(), sitemap()],
+	site: "https://eatarranza.dev/",
+	integrations: [react(), icon(), sitemap()],
 
-  image: {
-    service: passthroughImageService(),
-  },
-})
+	image: {
+		service: passthroughImageService(),
+	},
+});

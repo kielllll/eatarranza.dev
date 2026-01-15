@@ -1,50 +1,50 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { Image } from 'astro:assets';
-import Layout from '../layouts/main.astro';
-import logoSrc from '../assets/images/logo.png';
-import '../styles/global.css';
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import logoSrc from "../assets/images/logo.png";
+import Layout from "../layouts/main.astro";
+import "../styles/global.css";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 
 const logos = [
-  {
-    logo: 'typescript-icon-round',
-    name: 'Typescript'
-  },
-  {
-    logo: 'react',
-    name: 'React'
-  },
-  {
-    logo: 'nextjs-icon',
-    name: 'Next.js'
-  },
-  {
-    logo: 'astro-icon',
-    name: 'Astro',
-  },
-  {
-    logo: 'tailwindcss-icon',
-    name: 'tailwindcss',
-  },
-  {
-    logo: 'nestjs',
-    name: 'nestjs',
-  },
-  {
-    logo: 'postgresql',
-    name: 'PostgreSQL',
-  },
-  {
-    logo: 'docker-icon',
-    name: 'Docker',
-  },
-  {
-    logo: 'aws',
-    name: 'AWS'
-  }
+	{
+		logo: "typescript-icon-round",
+		name: "Typescript",
+	},
+	{
+		logo: "react",
+		name: "React",
+	},
+	{
+		logo: "nextjs-icon",
+		name: "Next.js",
+	},
+	{
+		logo: "astro-icon",
+		name: "Astro",
+	},
+	{
+		logo: "tailwindcss-icon",
+		name: "tailwindcss",
+	},
+	{
+		logo: "nestjs",
+		name: "nestjs",
+	},
+	{
+		logo: "postgresql",
+		name: "PostgreSQL",
+	},
+	{
+		logo: "docker-icon",
+		name: "Docker",
+	},
+	{
+		logo: "aws",
+		name: "AWS",
+	},
 ];
 ---
 
@@ -65,7 +65,8 @@ const logos = [
         </div>
       </header>
 
-      <section class="space-y-4">
+      <main class="space-y-6">
+              <section class="space-y-4">
         <p>
           I build accessible, pixel-perfect digital experiences for the web.
           Passionate about crafting thoughtful interfaces that blend design
@@ -105,6 +106,9 @@ const logos = [
           <p>Work In Progress</p>
         </div>
       </section>
+ 
+      </main>
+
 
       <footer class='text-center mt-auto mb-4'>
         © 2025 Ezekiel Tarranza
