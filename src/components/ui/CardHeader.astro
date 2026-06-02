@@ -1,0 +1,11 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class="overflow-hidden rounded-t-lg {className}">
+  <slot />
+</div>
