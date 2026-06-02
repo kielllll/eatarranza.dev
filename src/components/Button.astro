@@ -1,10 +1,27 @@
 ---
-// Click button, get confetti!
-// Styled by Tailwind :)
+// Button component with design system styling
+interface Props {
+	variant?: "primary" | "secondary" | "gradient";
+	class?: string;
+}
+
+const { variant = "primary", class: className = "" } = Astro.props;
+
+const variants = {
+	primary:
+		"bg-accent-primary text-text-primary hover:bg-[#00e0ff] focus:ring-2 focus:ring-accent-primary focus:ring-offset-2",
+	secondary:
+		"bg-transparent border-2 border-accent-secondary text-accent-secondary hover:bg-accent-secondary hover:text-text-primary focus:ring-2 focus:ring-accent-secondary focus:ring-offset-2",
+	gradient:
+		"bg-gradient-to-r from-accent-primary to-accent-secondary text-text-primary hover:scale-[1.02] focus:ring-2 focus:ring-accent-secondary focus:ring-offset-2",
+};
+
+const baseClasses =
+	"appearance-none py-md px-md font-semibold rounded-md shadow-md transition-all duration-fast ease-out-premium active:scale-[0.98]";
 ---
 
 <button
-	class="appearance-none py-2 px-4 bg-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75"
+	class={`${baseClasses} ${variants[variant]} ${className}`}
 >
 	<slot />
 </button>
